@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Your 3D on the Web</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <style type="text/css">
+    .reveal section img {
+      border: none;
+      background: none;
+      box-shadow: none;
+    }
+    </style>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( "link" );
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match( /print-pdf/gi ) ? "css/print/pdf.css" : "css/print/paper.css";
+      document.getElementsByTagName( "head" )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.3/webcomponents.min.js"></script> -->
+    <!-- <link rel="import" href="https://rawgit.com/nopjia/lmv-viewer/master/lmv-viewer.html"> -->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h1>Your 3D on the Web</h1>
+          <p>with Autodesk Viewing API</p>
+          <p>&nbsp;</p>
+          <small>
+            Nop Jiarathanakul &nbsp;·&nbsp; WebGL Developer &nbsp;·&nbsp; Autodesk
+          </small>
+
+<!--           <section>
+            <lmv-viewer url="http://lmv.rocks/data/house/Residential%20Exterior.obj.svf"
+              style="width: 100%; height: 600px"
+            ></lmv-viewer>
+            <p>Look! It's WebGL!</p>
+          </section> -->
+        </section>
+
+        <!-- TODO_NOP: get nice marketing images -->
+        <section data-background="http://mms.businesswire.com/bwapps/mediaserver/ViewMedia?mgid=362980&vid=5"></section>
+
+        <section>
+          <h1>Motivation</h1>
+        </section>
+
+        <!-- TODO_NOP: get picture -->
+        <section>
+          <p>100+ File Formats</p>
+          <img src="img/file-formats.png">
+          <p class="fragment">Proprietary!</p>
+        </section>
+
+        <section>
+          <h1>Typical Story</h1>
+        </section>
+
+        <section>
+          <img src="img/frontloader-scribble.png" width="60%">
+          <p>You: Make me a tractor thingy plz?</p>
+        </section>
+
+        <section>
+          <img src="img/frontloader-inventor.jpg">
+          <p>[awesome software made by awesome company]</p>
+        </section>
+
+        <section>
+          <img src="img/frontloader-inventor.jpg">
+          <p>Designer: I'm done! Wanna see it?</p>
+        </section>
+
+        <section>
+          <p>You: Sure! Send it over!</p>
+          <img src="img/gmail-send.png">
+          <p>&nbsp;</p>
+        </section>
+
+        <section>
+          <p>You: Sure! Send it over!</p>
+          <img src="img/gmail-dead.png">
+          <p>(btw, it's like 500mb)</p>
+        </section>
+
+        <section>
+          <img src="img/ipt-file.png">
+          <p>? ? ?</p>
+          <p>"Do I need like... Photoshop?"</p>
+        </section>
+
+        <section>
+          <img src="img/page-autodesk.png">
+        </section>
+
+        <section>
+          <img src="img/page-inventor.png">
+        </section>
+
+        <section>
+          <img src="img/page-inventor-scrolldown.png">
+        </section>
+
+        <section>
+          <img src="img/page-inventor-price.png">
+        </section>
+
+        <section>
+          <img width="75%" src="http://i.giphy.com/ekqDv81apSN9K.gif">
+        </section>
+
+        <section>
+          <h1>To the Rescue!</h1>
+          <a href="https://360.autodesk.com/viewer" target="_blank">360.autodesk.com/viewer</a>
+        </section>
+
+        <section>
+          <h1>More Demo!</h1>
+          <a href="http://lmv.rocks/" target="_blank">lmv.rocks</a>
+        </section>
+
+        <section>
+          <h1>can i haz plz?</h1>
+          <ul>
+            <li>We have API!</li>
+            <li>We have Custom Element!</li>
+          </ul>
+        </section>
+
+        <section>
+          <div style="display:inline-flex; align-items:center">
+            <a href="https://developer.autodesk.com/api/view-and-data-api/">
+              <img src="img/view-and-data-api.png">
+            </a>
+            <ul style="margin-left:2em">
+              <li class="fragment">Client-side Javascript</li>
+              <li class="fragment">Server-side REST</li>
+              <li class="fragment">Authentication</li>
+              <li class="fragment">bla</li>
+              <li class="fragment">...</li>
+              <li class="fragment">&nbsp;</li>
+              <li class="fragment"><a href="https://developer.autodesk.com/" target="_blank">developer.autodesk.com</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h1>Custom Element</h1>
+          <p>Instantiate the viewer with just one line of HTML</p>
+          <pre><code data-trim>
+            <lmv-viewer url="my-awesome/car/design.svf"></lmv-viewer>
+          </code></pre>
+          <a href="https://github.com/nopjia/lmv-viewer" target="_blank">github.com/nopjia/lmv-viewer</a>
+        </section>
+
+        <section>
+          <h1>Using the API</h1>
+          <pre><code data-trim>
+// grab the viewer reference
+
+var viewerElem = document.querySelector("lmv-viewer");
+var viewer = viewerElem.viewer;
+
+// call some APIs
+
+viewer.setLightPreset(2);
+
+viewer.explode(0.5);
+
+viewer.hideById(2);
+          </code></pre>
+        </section>
+
+        <section style="text-align: left">
+          <h1>Links</h1>
+          <p>
+            Gallery - <a href="http://lmv.rocks/" target="_blank">lmv.rocks</a><br>
+            Drag & Drop - <a href="https://360.autodesk.com/viewer" target="_blank">360.autodesk.com/viewer</a><br>
+            <br>
+            More Info<br>
+            <a href="https://developer.autodesk.com/">developer.autodesk.com</a><br>
+            <a href="http://developer-autodesk.github.io/">developer-autodesk.github.io</a><br>
+          </p>
+        </section>
+
+        <section style="text-align: left">
+          <h1>Thanks!</h1>
+          <p>
+            <br>
+            <a href="http://www.iamnop.com">iamnop.com</a><br>
+            <a href="https://twitter.com/nopjia">@nopjia</a><br>
+            <a href="https://github.com/nopjia">github.com/nopjia</a><br>
+            <br>
+            <a href="mailto:nop.jiarathanakul@autodesk.com">nop.jiarathanakul@autodesk.com</a>
+          </p>
+        </section>
+      </div>
+
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      Reveal.initialize({
+        controls: false,
+        history: true,
+        slideNumber: true,
+        transition: "none", // none/fade/slide/convex/concave/zoom
+
+        dependencies: [
+          { src: "lib/js/classList.js", condition: function() { return !document.body.classList; } },
+          { src: "plugin/markdown/marked.js", condition: function() { return !!document.querySelector( "[data-markdown]" ); } },
+          { src: "plugin/markdown/markdown.js", condition: function() { return !!document.querySelector( "[data-markdown]" ); } },
+          { src: "plugin/highlight/highlight.js", async: true, condition: function() { return !!document.querySelector( "pre code" ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: "plugin/zoom-js/zoom.js", async: true },
+          { src: "plugin/notes/notes.js", async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
